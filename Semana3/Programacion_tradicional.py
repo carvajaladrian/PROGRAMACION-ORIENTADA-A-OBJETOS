@@ -1,34 +1,34 @@
-# Programación Orientada a Objetos (POO)
-# Ejemplo: Gestión de la temperatura semanal
+# Programación Tradicional
+# Promedio semanal de temperatura
 
-class Clima:
-    def __init__(self, dias=7):
-        self.temperaturas = []
-        self.dias = dias
+# Definición de variables globales
+temperaturas = []
+dias = 7
 
-    def agregar_temperatura(self, valor):
-        self.temperaturas.append(valor)
+# Función para ingresar las temperaturas diarias
+def ingresar_temperatura(valor):
+    global temperaturas
+    temperaturas.append(valor)
 
-    def calcular_promedio(self):
-        if len(self.temperaturas) == 0:
-            return 0
-        return sum(self.temperaturas) / len(self.temperaturas)
+# Función para calcular el promedio semanal
+def calcular_promedio():
+    global temperaturas
+    if len(temperaturas) == 0:
+        return 0
+    return sum(temperaturas) / len(temperaturas)
 
-# Crear una instancia de la clase Clima
-semana = Clima()
-
-# Uso de los métodos en la programación orientada a objetos
-semana.agregar_temperatura(22)
-semana.agregar_temperatura(24)
-semana.agregar_temperatura(23)
-semana.agregar_temperatura(25)
-semana.agregar_temperatura(21)
-semana.agregar_temperatura(20)
-semana.agregar_temperatura(23)
+# Uso de las funciones en la programación tradicional
+ingresar_temperatura(22)
+ingresar_temperatura(24)
+ingresar_temperatura(23)
+ingresar_temperatura(25)
+ingresar_temperatura(21)
+ingresar_temperatura(20)
+ingresar_temperatura(23)
 
 # Calcular el promedio semanal
-promedio = semana.calcular_promedio()
+promedio = calcular_promedio()
 
 # Imprimir resultados
-print("Temperaturas registradas:", semana.temperaturas)
+print("Temperaturas registradas:", temperaturas)
 print("Promedio semanal:", promedio)
