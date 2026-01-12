@@ -5,7 +5,7 @@ IVA = 0.15
 # Clase en CamelCase
 class Factura:
     def __init__(self, nombre_producto, precio_unitario, cantidad):
-        # Atributos de la factura
+        # Datos de la factura
         self.nombre_producto = nombre_producto    # string
         self.precio_unitario = precio_unitario    # float
         self.cantidad = cantidad                  # int
@@ -24,7 +24,7 @@ class Factura:
         return self.calcular_subtotal() + self.calcular_iva()
 
     def mostrar_factura(self):
-        #Muestra en pantalla los datos completos de la factura.
+        #Muestra los datos de la factura.
         print("\n--- FACTURA ---")
         print(f"Producto: {self.nombre_producto}")
         print(f"Precio unitario: {self.precio_unitario}")
