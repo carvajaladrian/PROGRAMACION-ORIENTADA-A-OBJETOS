@@ -31,7 +31,7 @@ def mostrar_menu():
     ruta_base = os.path.dirname(__file__)
 
     unidades = {
-        '1': 'PROGRAMACION-ORIENTADA-A-OBJETOS',
+        '1': 'UNIDAD 1',
         '2': 'SO',
     }
 
