@@ -1,14 +1,38 @@
 {
     "1": {
         "id": "1",
-        "nombre": "RESISTENCIA",
+        "nombre": "FOCO",
         "cantidad": 3,
-        "precio": 3.0
+        "precio": 2.0
+    },
+    "2": {
+        "id": "2",
+        "nombre": "CABLES",
+        "cantidad": 3,
+        "precio": 10.0
+    },
+    "CINTA": {
+        "id": "CINTA",
+        "nombre": "cinta",
+        "cantidad": 2,
+        "precio": 4.0
+    },
+    "4": {
+        "id": "4",
+        "nombre": "TIMBRE",
+        "cantidad": 5,
+        "precio": 1.0
+    },
+    "5": {
+        "id": "5",
+        "nombre": "CAJA",
+        "cantidad": 6,
+        "precio": 2.0
     },
     "6": {
         "id": "6",
-        "nombre": "CASCO",
-        "cantidad": 2,
-        "precio": 7.0
+        "nombre": "LINTERNA",
+        "cantidad": 6,
+        "precio": 5.0
     }
 }

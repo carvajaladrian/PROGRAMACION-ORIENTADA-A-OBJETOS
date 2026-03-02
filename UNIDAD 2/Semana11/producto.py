@@ -1,38 +1,49 @@
-# producto.py
-
 class Producto:
-    def __init__(self, id, nombre, cantidad, precio):
-        self._id = id
-        self._nombre = nombre
-        self._cantidad = cantidad
-        self._precio = precio
+    def __init__(self, id_producto, nombre, cantidad, precio):
+        self.__id = id_producto
+        self.__nombre = nombre
+        self.__cantidad = cantidad
+        self.__precio = precio
 
+    # Getters
     def get_id(self):
-        return self._id
+        return self.__id
 
     def get_nombre(self):
-        return self._nombre
+        return self.__nombre
 
     def get_cantidad(self):
-        return self._cantidad
+        return self.__cantidad
 
     def get_precio(self):
-        return self._precio
+        return self.__precio
+
+    # Setters
+    def set_nombre(self, nombre):
+        self.__nombre = nombre
 
     def set_cantidad(self, cantidad):
-        self._cantidad = cantidad
+        self.__cantidad = cantidad
 
     def set_precio(self, precio):
-        self._precio = precio
+        self.__precio = precio
 
-    # Convertir a diccionario (ideal para CSV)
     def to_dict(self):
         return {
-            "id": self._id,
-            "nombre": self._nombre,
-            "cantidad": self._cantidad,
-            "precio": self._precio
+            "id": self.__id,
+            "nombre": self.__nombre,
+            "cantidad": self.__cantidad,
+            "precio": self.__precio
         }
 
-    def mostrar(self):
-        print(f"ID: {self._id} | Nombre: {self._nombre} | Cantidad: {self._cantidad} | Precio: {self._precio}")
+    @staticmethod
+    def from_dict(data):
+        return Producto(
+            data["id"],
+            data["nombre"],
+            data["cantidad"],
+            data["precio"]
+        )
+
+    def __str__(self):
+        return f"ID: {self.__id} | Nombre: {self.__nombre} | Cantidad: {self.__cantidad} | Precio: ${self.__precio:.2f}"
