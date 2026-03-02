@@ -1,0 +1,14 @@
+{
+    "1": {
+        "id": "1",
+        "nombre": "RESISTENCIA",
+        "cantidad": 3,
+        "precio": 3.0
+    },
+    "6": {
+        "id": "6",
+        "nombre": "CASCO",
+        "cantidad": 2,
+        "precio": 7.0
+    }
+}
